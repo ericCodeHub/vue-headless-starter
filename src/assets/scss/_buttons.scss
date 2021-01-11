@@ -1,0 +1,18 @@
+button,
+[type="submit"] {
+
+  &:hover {
+
+  }
+
+  &:focus {
+
+  }
+
+  &:disabled {
+
+    &:hover {
+
+    }
+  }
+}

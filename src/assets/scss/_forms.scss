@@ -1,0 +1,53 @@
+label {
+
+}
+
+input,
+select,
+textarea {
+
+  &:hover {
+
+  }
+
+  &:focus {
+
+  }
+
+  &:disabled {
+
+    &:hover {
+
+    }
+  }
+
+  &::placeholder {
+
+  }
+}
+
+textarea {
+
+}
+
+[type="checkbox"],
+[type="radio"] {
+
+}
+
+[type="file"] {
+
+}
+
+select {
+
+}
+
+[type="checkbox"],
+[type="radio"],
+[type="file"],
+select {
+  &:focus {
+
+  }
+}
