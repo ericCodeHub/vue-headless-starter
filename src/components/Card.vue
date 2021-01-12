@@ -3,7 +3,7 @@
     <router-link
       v-if="post.featured_image"
       :to="{ name: 'post', params: { slug: post.slug } }">
-      <img :src="post.featured_image" alt="Blog Post Featured Image"/>
+      <img :src="post.featured_image" alt=""/>
     </router-link>
     <span>
       <i>&mdash;</i>

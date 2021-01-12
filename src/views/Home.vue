@@ -2,12 +2,10 @@
   <div>
 
     <section>
-      <p>
-        Let's say this is a static homepage with a Gravity Forms contact form.
-      </p>
+      <p>Let's say this is a static homepage with a Gravity Forms contact form.</p>
     </section>
 
-  <GravityForm formId="1"></GravityForm>
+    <GravityForm formId="1"></GravityForm>
 
   </div>
 </template>

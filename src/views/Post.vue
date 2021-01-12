@@ -28,24 +28,6 @@
 
     </article>
 
-    <div>
-      <h3>Post a comment</h3>
-      <form @submit.prevent="postComment">
-        <input type="text" v-model="newComment.author_name" placeholder="Name" required />
-        <input type="text" v-model="newComment.author_email" placeholder="Email" required />
-        <textarea v-model="newComment.content">Comment</textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-
-
-    <div v-for="comment in comments">
-      <hr>
-      <div v-html="comment.content.rendered"></div>
-      <p>{{comment.author_name}}</p>
-      <button v-if="comment._links.children" type="button" @click="childComments(comment.id)">See Child Comments</button>
-    </div>
-
   </div>
 </template>
 
@@ -70,14 +52,6 @@
         title: '',
         content: '',
         featured_image: '',
-        comments: [],
-        newComment: {
-          author_name: '',
-          author_email: '',
-          date: '',
-          post: '',
-          content: ''
-        }
       }
     },
 
@@ -88,7 +62,6 @@
       this.title = this.post.title.rendered;
       this.content = this.post.content.rendered;
       this.featured_image = await this.getFeaturedImage(this.post.featured_media);
-      this.comments = await this.getComments(this.post.id);
 
       bus.$emit('toggleLoading', false);
     },
@@ -108,50 +81,6 @@
           resolve(response.data[0]);
 
         });
-      },
-
-      getComments: async function (id) {
-        let response;
-        try {
-          response = await this.get(`/comments?post=${id}&parent=0`);
-        } catch (error) {
-          return null;
-        }
-
-        console.log(response.data)
-
-       return response.data
-
-      },
-      updateComments: async function(){
-        let $this = this
-        axios.get(`https://headless.solutionagency.net/wp-json/wp/v2/comments?post=${this.post.id}`)
-            .then(function(response){
-              $this.comments = response.data
-            })
-        
-      },
-      childComments: async function(id){
-        let response;
-        try {
-          response = await this.get(`/comments?post=${this.post.id}&parent=${id}`);
-        } catch (error) {
-          return null;
-        }
-
-        console.log(response.data)
-
-       // return response.data
-      },
-      postComment: function(){
-        let $this = this
-        this.newComment.date = new Date();
-        this.newComment.post = this.post.id
-
-        axios.post('https://headless.solutionagency.net/wp-json/wp/v2/comments', this.newComment)
-            .then(function(){
-              $this.updateComments()
-            })
       },
 
       getFeaturedImage: async function (id) {

@@ -1,12 +1,6 @@
 <template>
   <div>
 
-    <section>
-      <p>
-        This would be a default blog.
-      </p>
-    </section>
-
     <ul>
       <Card
         v-for="post in posts"
@@ -15,11 +9,6 @@
       />
     </ul>
 
-    <Pagination
-      :currentPage="parseInt(page)"
-      :totalPages="parseInt(totalPages)"
-    ></Pagination>
-
   </div>
 </template>
 
@@ -27,7 +16,6 @@
 import bus from '../bus';
 import ajax from '../mixins/ajax';
 import Card from '../components/Card';
-import Pagination from '../components/Pagination';
 
 export default {
   name: 'Feed',
@@ -117,7 +105,7 @@ export default {
               response = await this.get(
                 `/media/${post.featured_media}`
               );
-              post.featured_image = response.data.media_details.sizes['medium'].source_url;
+              post.featured_image = response.data.media_details.sizes['medium_large'].source_url;
             } catch (error) {
               post.featured_image = null;
             }
@@ -132,8 +120,7 @@ export default {
   },
 
   components: {
-    Card,
-    Pagination
+    Card
   }
 }
 
@@ -141,16 +128,5 @@ export default {
 
 <style scoped lang="scss">
 
-  section {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-  }
-
-  ul {
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax( 320px, auto ) );
-    grid-gap: 1rem;
-  }
 </style>
 

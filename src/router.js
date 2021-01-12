@@ -1,11 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Feed from "./views/Feed";
-import Work from "./views/Work";
 import Home from "./views/Home";
 import FourOFour from "./views/FourOFour";
 import Post from "./views/Post";
-import Preview from "./views/Preview";
 import bus from "./bus";
 
 Vue.use(VueRouter);
@@ -22,11 +20,6 @@ const routes = [
     component: Feed
   },
   {
-    name: "work",
-    path: "/work",
-    component: Work
-  },
-  {
     name: "post",
     path: "/posts/:slug",
     component: Post
@@ -40,11 +33,6 @@ const routes = [
     name: "four-o-four",
     path: "/404",
     component: FourOFour
-  },
-  {
-    name: "preview",
-    path: "/_preview/*",
-    component: Preview
   },
   {
     path: "*",
