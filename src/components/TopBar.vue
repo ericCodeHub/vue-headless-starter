@@ -38,15 +38,12 @@ export default {
     getMenu: async function () {
       let $this = this
       axios.get('http://headless.solutionagency.net/wp-json/menus/v1/menus/primary')
-            .then(function (response) {
-              $this.menu = response.data; 
-              $this.updateURLs()
-              $this.loading = false
-            })
-
-
-      
-
+        .then(function (response) {
+          $this.menu = response.data; 
+          $this.updateURLs()
+          $this.loading = false
+        })
+        
       bus.$emit('toggleLoading', false);
     },
   },

@@ -8,16 +8,6 @@ In the root of the project, run `npm install`.
 
 ## Usage
 
-### Set Your Environment Variables
-
-Various important values are loaded into the application via Node environment variables, which you'll need to define. Locally, run `cp .env.sample .env.local` to create a local file for defining the following:
-
-- `REST_ENDPOINT` - The WordPress REST API endpoint from which data will be pulled. Leave off the trailing slash. Example: `https://blah-blah-blah.com/wp-json/wp/v2`
-- `POSTS_PER_PAGE` - The default number of posts per page that will be displayed.
-- `GA_TRACKING_ID` - A Google Analytics tracking ID.
-- `REQUEST_CACHE_MAX` - The maximum number of AJAX requests that will be cached in memory.
-- `GF_USERNAME` and `GF_PASSWORD` - Gravity Form keys for form read access that we will give you.
-
 ### Spin Up Locally
 
 Run `npm run serve` to spin up a running version from localhost.
@@ -25,3 +15,14 @@ Run `npm run serve` to spin up a running version from localhost.
 ### Build for Production
 
 Run `npm run build`.
+
+## Notes
+
+- We will provide you a sample design and .env.local file
+- Blog posts should show up with sample data after setup
+- Focus on the blog listing page layout
+- Header and footer can be ignored
+- Feel free to rewrite/restructure any code that exists in this starter to make it your own
+- Don't spend more than a few hours on this
+- Extra credit: Single blog layout
+- Extra credit: Category filtering
