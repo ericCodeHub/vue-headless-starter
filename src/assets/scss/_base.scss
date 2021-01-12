@@ -1,15 +1,42 @@
-// Bitters 1.6.0
-// http://bitters.bourbon.io
-// Copyright 2013-2017 thoughtbot, inc.
-// MIT License
-
 @import "variables";
 @import "mixins";
 @import "buttons";
-@import "forms";
-@import "layout";
-@import "lists";
-@import "media";
-@import "tables";
 @import "typography";
 @import "wordpress";
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}

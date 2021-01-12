@@ -1,8 +1,8 @@
 {
-  "name": "wp-vue",
-  "version": "1.1.0",
-  "author": "Alex MacArthur <alex@macarthur.me> (https://macarthur.me)",
-  "description": "A simple Vue blog template that displays posts from any WordPress REST API endpoint.",
+  "name": "solution-vue-wp-starter",
+  "version": "0.1.0",
+  "author": "Solution Agency",
+  "description": "A Vue starter template for using WP as a headless CMS",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,9 +11,6 @@
     "precommit": "pretty-quick --staged",
     "prettier": "prettier --write \"./src/**/*.js\""
   },
-  "bugs": {
-    "url": "https://github.com/alexmacarthur/wp-vue/issues"
-  },
   "keywords": [
     "vue",
     "wordpress",
@@ -21,7 +18,6 @@
     "REST",
     "API"
   ],
-  "homepage": "https://wp.netlify.com",
   "dependencies": {
     "axios": "^0.21.1",
     "vue": "^2.6.11",
@@ -45,10 +41,6 @@
     "style-resources-loader": "^1.3.3",
     "vue-cli-plugin-style-resources-loader": "^0.1.4",
     "vue-template-compiler": "^2.6.11"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alexmacarthur/wp-vue"
   },
   "postcss": {
     "plugins": {

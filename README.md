@@ -1,6 +1,6 @@
 # Solution Agency Vue + headless WP starter template
 
-This is in beta and is based on [Alex MacArthur's WP Vue starter](https://macarthur.me/)
+This is in beta and is based on [Alex MacArthur's WP Vue Starter](https://macarthur.me/)
 
 ## Install
 

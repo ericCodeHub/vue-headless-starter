@@ -2,10 +2,8 @@
   <div>
 
     <section>
-      <p>Let's say this is a static homepage with a Gravity Forms contact form.</p>
+      <p>Let's say this is a static homepage.</p>
     </section>
-
-    <GravityForm formId="1"></GravityForm>
 
   </div>
 </template>
@@ -13,12 +11,11 @@
 <script>
 import bus from '../bus';
 import ajax from '../mixins/ajax';
-import GravityForm from '../components/GravityForm';
 
 export default {
   name: 'Home',
   components: {
-    GravityForm
+
   },
   mixins: [ajax],
 
