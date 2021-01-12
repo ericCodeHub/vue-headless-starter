@@ -1,25 +1,11 @@
 <template>
   <li>
-    <router-link
-      v-if="post.featured_image"
-      :to="{ name: 'post', params: { slug: post.slug } }">
+    <router-link v-if="post.featured_image" :to="{ name: 'post', params: { slug: post.slug } }">
       <img :src="post.featured_image" alt=""/>
     </router-link>
-    <span>
-      <i>&mdash;</i>
-        {{ getFormattedDate(post.date) }}
-      <i>&mdash;</i>
-    </span>
+    <span>{{ getFormattedDate(post.date) }}</span>
     <h3>
-      <router-link
-        :to="{
-          name: 'post',
-          params: {
-            slug: post.slug
-          }
-        }"
-        v-html="post.title.rendered">
-      </router-link>
+      <router-link :to="{ name: 'post', params: { slug: post.slug } }" v-html="post.title.rendered"> </router-link>
     </h3>
   </li>
 </template>

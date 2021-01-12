@@ -1,33 +1,18 @@
 <template>
   <div>
-
     <article>
-
       <a @click="goBack">Back to All Posts</a>
 
       <header>
-        <img
-          v-if="featured_image"
-          :src="featured_image"
-        >
+        <img v-if="featured_image" :src="featured_image">
         <h1 v-html="title"></h1>
 
-        <ul>
-          <li>
-            <span>Published on {{ date }}</span>
-          </li>
-          <li>
-            <span>
-              <a :href="link">View Post at Source</a>
-            </span>
-          </li>
-        </ul>
+        <span>Published on {{ date }}</span>
       </header>
 
       <PostBody :content="content"></PostBody>
 
     </article>
-
   </div>
 </template>
 
@@ -36,8 +21,6 @@
   import utils from '../mixins/utils';
   import ajax from '../mixins/ajax';
   import PostBody from '../components/PostBody';
-
-  import axios from 'axios';
 
   export default {
     name: 'Post',
