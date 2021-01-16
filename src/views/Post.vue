@@ -70,7 +70,7 @@
         let response;
         try {
 
-          if(post.featured_media <= 0) {
+          if(this.post.featured_media <= 0) {
             throw "No featured image.";
           }
 
@@ -79,7 +79,7 @@
           return null;
         }
 
-        return response.data.media_details.sizes['medium'].source_url;
+        return response.data.media_details.sizes['medium_large'].source_url;
       },
     },
 
