@@ -79,6 +79,7 @@ export default {
 @import "assets/scss/_base.scss";
 
 #app {
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

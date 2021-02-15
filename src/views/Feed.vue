@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <section class="categories">
+      <section class="blog-leader">
         <h1>Latest Posts</h1>
         <ul class="categories">
           <li>
@@ -137,9 +137,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.blog-leader {
+  display: flex;
+  align-items: flex-end;
+}
 .categories {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+}
+.categories h1 {
+  margin-right: 20px;
+  font-weight: bold;
 }
 #all-news {
   color: yellow;
@@ -151,20 +159,16 @@ export default {
 }
 .categories li {
   display: flex;
-  padding: 10px;
+  padding: 0px 10px;
   align-items: center;
   justify-content: space-around;
 }
 .post-cards {
-  width: 25%;
+  max-width: 33%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-}
-.post-cards-old {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
+  padding: 25px;
 }
 </style>
